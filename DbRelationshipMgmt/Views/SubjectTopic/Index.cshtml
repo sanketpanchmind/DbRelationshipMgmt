@@ -1,0 +1,66 @@
+﻿@model List<SubjectTopic>
+
+<h1>Subject Topic List</h1>
+@* <a asp-controller="SubjectTopic" asp-action="Index1">Add Subject Topics</a> *@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Add Topics
+</button>
+<form method="post" asp-controller="SubjectTopic" asp-action="Search">
+    <input type="search" name="search" />
+    <button class="btn btn-primary">Submit</button>
+</form>
+<table class="table">
+    <thead>
+        <th>Id</th>
+        <th>Subject Topic Name</th>
+        <th>Subject Topic Description</th>
+    </thead>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                @i.SubjectId
+                <td>@i.SubjectTopicId</td>
+                <td>@i.SubjectTopicName</td>
+                <td>@i.SubjectTopicDescription</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Modal -->
+<form method="post" enctype="multipart/form-data" asp-controller="SubjectTopic" asp-action="AddTopic">
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+                        <div class="mb-3">
+                            <label>Subject Topic Name</label>
+                            <input name="SubjectTopicName" />
+                        </div>
+                        <div class="mb-3">
+                            <label>Subject Topic Description</label>
+                            <input name="SubjectTopicDescription" />
+                        </div>
+                        <div class="mb-3">
+                            <label>SubjectId</label>
+                            <input name="SubjectId" />
+                        </div>
+                        <div class="mb-3">
+                        <label for="Subjectphoto" class="form-label">Default file input example</label>
+                        <input class="form-control" name="formFile" type="file" id="formFile" multiple="multiple" />
+                        </div>
+                        <button class="btn btn-primary ">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+
+

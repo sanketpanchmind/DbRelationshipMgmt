@@ -1,0 +1,25 @@
+﻿@model List<Tutorial>
+
+    <h1>Tutorial List</h1>
+
+    <table class="table">
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            @foreach(var i in Model)
+            {
+
+            <tr>
+                <td>@i.Id</td>
+                <td>@i.Name</td>
+                <td>@i.Description</td>
+                <td>
+                    <a asp-controller="Article" asp-action="Displayarticle" asp-route-Id="@i.Id">View Courses</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>

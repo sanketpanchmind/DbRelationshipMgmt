@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbRelationshipMgmt", "DbRelationshipMgmt\DbRelationshipMgmt.csproj", "{861AFF14-D2FC-4FB9-8DFC-7E76ED647615}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{861AFF14-D2FC-4FB9-8DFC-7E76ED647615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{861AFF14-D2FC-4FB9-8DFC-7E76ED647615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{861AFF14-D2FC-4FB9-8DFC-7E76ED647615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{861AFF14-D2FC-4FB9-8DFC-7E76ED647615}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D294808-9D44-4DE4-8B36-33CCE6C8CF09}
+	EndGlobalSection
+EndGlobal

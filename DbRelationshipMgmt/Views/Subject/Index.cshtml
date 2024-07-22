@@ -1,0 +1,46 @@
+﻿@model List<Subject>
+
+    <h1>Subject List</h1>
+<a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Add Subject
+</a>
+<table class="table">
+    <thead>
+    <th>Id</th>
+    <th>Subject Name</th>
+    <th>Action</th>
+    </thead>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.SubjectId</td>
+                <td>@i.SubjectName</td>
+                <td>
+                    <a asp-controller="SubjectTopic" asp-action="GetsubjecttopicsbyId" asp-route-Id="@i.SubjectId">@i.SubjectId View Topics</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form method="post" asp-controller="Subject" asp-action="AddSubject">
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label>Subject Name</label>
+                        <input name="SubjectName" />
+                    </div>
+                    <button class="btn btn-primary ">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

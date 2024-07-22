@@ -1,0 +1,27 @@
+﻿@model uploadimg
+
+<h1>Uplaod image</h1>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" asp-controller="Image" asp-action="Addimg">
+
+           <input type="text" name="Name" />
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Default file input example</label>
+                <input class="form-control" name="photo" formenctype="multipart/form-data" type="file" id="formFile">
+            </div>
+
+            <button>Submit</button>
+            </form>
+
+        </div>
+    </div>
+</div>
